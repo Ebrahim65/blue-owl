@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueOwl | Coming Soon</title>
+    <!-- Primary favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon-16x16.png">
+
+    <!-- PNG fallbacks -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Android / PWA -->
+    <link rel="manifest" href="images/android-chrome-192x192.png">
+    <meta name="theme-color" content="#0A5BFF">
+
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Particle Layer -->
+    <div class="particles"></div>
+
+    <!-- Score -->
+    <div class="score">✨ Score: 0</div>
+
+    <main class="container">
+        <!-- LOGO -->
+        <div class="logo">
+            <svg id="owl" viewBox="0 0 300 260" width="250" aria-hidden="true">
+                <ellipse cx="150" cy="130" rx="130" ry="115" fill="#0A5BFF"/>
+
+                <!-- Left Eye -->
+                <g class="eye left">
+                    <defs>
+                        <clipPath id="eyeClipLeft">
+                            <circle cx="95" cy="120" r="42"/>
+                        </clipPath>
+                    </defs>
+                    <circle cx="95" cy="120" r="42" fill="#061C3F"/>
+                    <circle class="pupil" cx="95" cy="120" r="14" fill="#FF8FCF"/>
+                    <rect class="lid" x="53" y="78" width="84" height="84"
+                          clip-path="url(#eyeClipLeft)"/>
+                </g>
+
+                <!-- Right Eye -->
+                <g class="eye right">
+                    <defs>
+                        <clipPath id="eyeClipRight">
+                            <circle cx="205" cy="120" r="42"/>
+                        </clipPath>
+                    </defs>
+                    <circle cx="205" cy="120" r="42" fill="#061C3F"/>
+                    <circle class="pupil" cx="205" cy="120" r="14" fill="#FF8FCF"/>
+                    <rect class="lid" x="163" y="78" width="84" height="84"
+                          clip-path="url(#eyeClipRight)"/>
+                </g>
+
+                <!-- Star -->
+                <polygon points="150,140 165,165 150,190 135,165"
+                         fill="url(#starGrad)"/>
+
+                <defs>
+                    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#7B5CFF"/>
+                        <stop offset="100%" stop-color="#FF8FCF"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <h1>We’re Building Something Smart</h1>
+        <p class="tagline">BlueOwl is launching soon. Precision. Insight. Innovation.</p>
+
+        <!-- PROGRESS -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-text">Development in progress</div>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <section class="countdown" aria-label="Launch countdown">
+            <div class="countdown-item">
+                <div class="countdown-value" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </section>
+
+        <!-- SOCIAL -->
+        <nav class="social-icons" aria-label="Social links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </nav>
+
+        <footer>© 2025 BlueOwl. All rights reserved.</footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
