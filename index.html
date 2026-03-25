@@ -3,44 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueOwl | Coming Soon</title>
-    <!-- Primary favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon-16x16.png">
+    <title>Jobidy | Coming Soon — by BlueOwl</title>
+    <meta name="description" content="Jobidy connects consumers with skilled service providers. Any task, the right skill — on demand. Launching soon by BlueOwl.">
 
-    <!-- PNG fallbacks -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-
-    <!-- Apple Touch Icon -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
-    <!-- Android / PWA -->
-    <link rel="manifest" href="images/android-chrome-192x192.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <meta name="theme-color" content="#0A5BFF">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+
     <!-- Particle Layer -->
     <div class="particles"></div>
 
-    <!-- Score -->
-    <div class="score">✨ Score: 0</div>
-
-    <main class="container">
-        <!-- LOGO -->
-        <div class="logo">
-            <svg id="owl" viewBox="0 0 300 260" width="250" aria-hidden="true">
+    <!-- NAV -->
+    <header class="nav">
+        <div class="nav-brand">
+            <svg id="owl" class="nav-owl" viewBox="0 0 300 260" aria-hidden="true">
                 <ellipse cx="150" cy="130" rx="130" ry="115" fill="#0A5BFF"/>
-
-                <!-- Left Eye -->
                 <g class="eye left">
                     <defs>
                         <clipPath id="eyeClipLeft">
@@ -49,11 +42,8 @@
                     </defs>
                     <circle cx="95" cy="120" r="42" fill="#061C3F"/>
                     <circle class="pupil" cx="95" cy="120" r="14" fill="#FF8FCF"/>
-                    <rect class="lid" x="53" y="78" width="84" height="84"
-                          clip-path="url(#eyeClipLeft)"/>
+                    <rect class="lid" x="53" y="78" width="84" height="84" clip-path="url(#eyeClipLeft)"/>
                 </g>
-
-                <!-- Right Eye -->
                 <g class="eye right">
                     <defs>
                         <clipPath id="eyeClipRight">
@@ -62,65 +52,200 @@
                     </defs>
                     <circle cx="205" cy="120" r="42" fill="#061C3F"/>
                     <circle class="pupil" cx="205" cy="120" r="14" fill="#FF8FCF"/>
-                    <rect class="lid" x="163" y="78" width="84" height="84"
-                          clip-path="url(#eyeClipRight)"/>
+                    <rect class="lid" x="163" y="78" width="84" height="84" clip-path="url(#eyeClipRight)"/>
                 </g>
-
-                <!-- Star -->
-                <polygon points="150,140 165,165 150,190 135,165"
-                         fill="url(#starGrad)"/>
-
+                <polygon points="150,140 165,165 150,190 135,165" fill="url(#starGradNav)"/>
                 <defs>
-                    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="starGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#7B5CFF"/>
                         <stop offset="100%" stop-color="#FF8FCF"/>
                     </linearGradient>
                 </defs>
             </svg>
+            <span class="brand-name">BlueOwl</span>
         </div>
-
-        <h1>We’re Building Something Smart</h1>
-        <p class="tagline">BlueOwl is launching soon. Precision. Insight. Innovation.</p>
-
-        <!-- PROGRESS -->
-        <div class="progress-container">
-            <div class="progress-bar"></div>
-            <div class="progress-text">Development in progress</div>
+        <div class="nav-right">
+            <span class="nav-pill"><i class="fas fa-rocket"></i> Jobidy — Coming Soon</span>
         </div>
+    </header>
 
-        <!-- COUNTDOWN -->
-        <section class="countdown" aria-label="Launch countdown">
-            <div class="countdown-item">
-                <div class="countdown-value" id="days">00</div>
-                <div class="countdown-label">Days</div>
+    <!-- MAIN -->
+    <main class="main-wrapper">
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-left">
+                <div class="eyebrow-pill">
+                    <span class="status-dot"></span>
+                    Our first product is almost here
+                </div>
+
+                <h1 class="hero-title">
+                    Any task.<br>
+                    <span class="gradient-text">The right skill.</span>
+                </h1>
+
+                <p class="hero-sub">
+                    Jobidy connects you with verified skilled professionals — on demand.
+                    From plumbing to painting, carpentry to cleaning, we match you with
+                    the right person for the job.
+                </p>
+
+                <form class="email-form" id="emailForm" novalidate>
+                    <div class="email-wrap">
+                        <i class="fas fa-envelope email-icon"></i>
+                        <input
+                            type="email"
+                            id="emailInput"
+                            placeholder="Enter your email for early access"
+                            autocomplete="email"
+                            required
+                        >
+                        <button type="submit">Get Early Access</button>
+                    </div>
+                    <p class="form-note">Join the waitlist. No spam, ever.</p>
+                </form>
+
+                <div id="formSuccess" class="form-success hidden">
+                    <i class="fas fa-check-circle"></i>
+                    You're on the list! We'll reach out before launch.
+                </div>
             </div>
-            <div class="countdown-item">
-                <div class="countdown-value" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-value" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-value" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
+
+            <div class="hero-right">
+                <!-- Glow -->
+                <div class="mockup-glow"></div>
+
+                <!-- App Mockup Card -->
+                <div class="app-mockup">
+                    <div class="mockup-header">
+                        <span class="mac-dot red"></span>
+                        <span class="mac-dot yellow"></span>
+                        <span class="mac-dot green"></span>
+                        <span class="mockup-app-title">Jobidy</span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-section-label">New Job Request</div>
+                        <div class="mockup-job-card">
+                            <div class="job-icon-wrap"><i class="fas fa-wrench"></i></div>
+                            <div>
+                                <div class="job-title">Fix leaky bathroom pipe</div>
+                                <div class="job-meta">Today &nbsp;·&nbsp; 3 miles away</div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-divider"></div>
+
+                        <div class="mockup-section-label">Best Match</div>
+                        <div class="mockup-provider">
+                            <div class="provider-avatar">JD</div>
+                            <div class="provider-info">
+                                <div class="provider-name">James D.</div>
+                                <div class="provider-stars">
+                                    <i class="fas fa-star"></i> 4.9 &nbsp;·&nbsp; 127 jobs
+                                </div>
+                            </div>
+                            <div class="top-pro-badge">Top Pro</div>
+                        </div>
+
+                        <button class="mockup-cta" tabindex="-1">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Floating service chips -->
+                <div class="chip chip-1"><i class="fas fa-bolt"></i> Electrical</div>
+                <div class="chip chip-2"><i class="fas fa-broom"></i> Cleaning</div>
+                <div class="chip chip-3"><i class="fas fa-paint-roller"></i> Painting</div>
+                <div class="chip chip-4"><i class="fas fa-hammer"></i> Carpentry</div>
+                <div class="chip chip-5"><i class="fas fa-truck-moving"></i> Moving</div>
             </div>
         </section>
 
-        <!-- SOCIAL -->
-        <nav class="social-icons" aria-label="Social links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-        </nav>
+        <!-- COUNTDOWN -->
+        <section class="countdown-section">
+            <p class="countdown-heading">Launching in</p>
+            <div class="countdown" aria-label="Launch countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <span class="countdown-sep" aria-hidden="true">:</span>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <span class="countdown-sep" aria-hidden="true">:</span>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Mins</div>
+                </div>
+                <span class="countdown-sep" aria-hidden="true">:</span>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Secs</div>
+                </div>
+            </div>
+        </section>
 
-        <footer>© 2025 BlueOwl. All rights reserved.</footer>
+        <!-- HOW IT WORKS -->
+        <section class="how-section">
+            <h2 class="section-title">How Jobidy works</h2>
+            <p class="section-sub">Three simple steps to get any task done</p>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <div class="step-icon-wrap"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>Post your task</h3>
+                    <p>Describe what you need done, when, and where. Takes less than 2 minutes.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <div class="step-icon-wrap"><i class="fas fa-user-check"></i></div>
+                    <h3>Get matched</h3>
+                    <p>We instantly connect you with nearby, verified professionals ready to help.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon-wrap"><i class="fas fa-circle-check"></i></div>
+                    <h3>Task complete</h3>
+                    <p>Your pro arrives, gets the job done, and you pay securely in-app.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services-section">
+            <h2 class="section-title">What can you get done?</h2>
+            <p class="section-sub">A growing range of services, all in one place</p>
+            <div class="service-grid">
+                <div class="service-item"><i class="fas fa-wrench"></i><span>Plumbing</span></div>
+                <div class="service-item"><i class="fas fa-bolt"></i><span>Electrical</span></div>
+                <div class="service-item"><i class="fas fa-broom"></i><span>Cleaning</span></div>
+                <div class="service-item"><i class="fas fa-hammer"></i><span>Carpentry</span></div>
+                <div class="service-item"><i class="fas fa-paint-roller"></i><span>Painting</span></div>
+                <div class="service-item"><i class="fas fa-truck-moving"></i><span>Moving</span></div>
+                <div class="service-item"><i class="fas fa-seedling"></i><span>Gardening</span></div>
+                <div class="service-item"><i class="fas fa-tv"></i><span>Tech Help</span></div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Scripts -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <nav class="social-icons" aria-label="Social links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+        </nav>
+        <p class="footer-text">
+            Jobidy is a <strong>BlueOwl</strong> product &nbsp;&middot;&nbsp; &copy; 2026 BlueOwl. All rights reserved.
+        </p>
+    </footer>
+
     <script src="js/main.js" defer></script>
 </body>
 </html>
