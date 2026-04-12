@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verified — Jobidy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background: #f8f5ff;
+        font-family: "DM Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 40px rgba(91, 45, 142, 0.1);
+        max-width: 480px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .card-header {
+        background: #5b2d8e;
+        padding: 32px 40px;
+        text-align: center;
+      }
+
+      .logo {
+        font-family: "Syne", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+      }
+
+      .tagline {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 13px;
+        margin-top: 6px;
+      }
+
+      .card-body {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .icon-wrap {
+        width: 72px;
+        height: 72px;
+        background: #f0fdf4;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+      }
+
+      .icon-wrap svg {
+        width: 36px;
+        height: 36px;
+      }
+
+      h1 {
+        font-family: "Syne", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a0a2e;
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 32px;
+      }
+
+      .steps {
+        background: #f8f5ff;
+        border-radius: 12px;
+        padding: 20px 24px;
+        text-align: left;
+        margin-bottom: 32px;
+      }
+
+      .steps-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #5b2d8e;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step-num {
+        width: 22px;
+        height: 22px;
+        background: #5b2d8e;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .step-text {
+        font-size: 14px;
+        color: #374151;
+        line-height: 1.5;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #ede9f6;
+        margin: 0 0 24px;
+      }
+
+      .footer-note {
+        color: #9ca3af;
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      .card-footer {
+        background: #f3f0fa;
+        border-top: 1px solid #ede9f6;
+        padding: 16px 40px;
+        text-align: center;
+      }
+
+      .card-footer p {
+        color: #9ca3af;
+        font-size: 12px;
+        margin: 0;
+      }
+
+      /* Error state — shown if URL has error param */
+      .error-state {
+        display: none;
+      }
+      .success-state {
+        display: block;
+      }
+
+      @media (max-width: 520px) {
+        .card-header,
+        .card-body,
+        .card-footer {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <div class="logo">Jobidy</div>
+        <div class="tagline">Connecting people. Creating opportunity.</div>
+      </div>
+
+      <div class="card-body">
+        <!-- Success state -->
+        <div class="success-state" id="successState">
+          <div class="icon-wrap">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="12" fill="#DCFCE7" />
+              <path
+                d="M7 12.5L10.5 16L17 9"
+                stroke="#16A34A"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <h1>Email Verified!</h1>
+          <p>
+            Your Jobidy account is now active.<br />
+            Open the Jobidy app to get started.
+          </p>
+
+          <div class="steps">
+            <div class="steps-title">Next steps</div>
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                Open the <strong>Jobidy app</strong> on your phone
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-text">Sign in with your email and password</div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Workers:</strong> complete your profile and submit for
+                verification<br />
+                <strong>Consumers:</strong> post your first job
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+          <p class="footer-note">
+            If you did not create a Jobidy account, please contact us at
+            <a href="mailto:support@blueowl.co.za" style="color: #9b51e0"
+              >support@blueowl.co.za</a
+            >
+          </p>
+        </div>
+
+        <!-- Error state -->
+        <div class="error-state" id="errorState">
+          <div class="icon-wrap" style="background: #fef2f2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="12" fill="#FEE2E2" />
+              <path
+                d="M8 8L16 16M16 8L8 16"
+                stroke="#DC2626"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <h1>Link Expired</h1>
+          <p>
+            This verification link has expired or already been used.<br />
+            Open the Jobidy app and request a new verification email.
+          </p>
+          <hr class="divider" />
+          <p class="footer-note">
+            Need help? Contact us at
+            <a href="mailto:support@blueowl.co.za" style="color: #9b51e0"
+              >support@blueowl.co.za</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <p>
+          &copy; 2025 Jobidy &mdash; Blue Owl Projects &mdash; Pretoria, South
+          Africa
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Check URL params — Supabase appends error info on failure
+      const params = new URLSearchParams(window.location.search);
+      const hashParams = new URLSearchParams(
+        window.location.hash.replace("#", ""),
+      );
+
+      const hasError = params.get("error") || hashParams.get("error");
+
+      if (hasError) {
+        document.getElementById("successState").style.display = "none";
+        document.getElementById("errorState").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
